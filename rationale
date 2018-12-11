@@ -7,3 +7,5 @@ There are two "top-level" abstract classes, Account and Product. All other rules
 This architecture is far from perfect; one notable problem with my top-down hierarchy is illustrated by Books and GenericProducts. It happens to be the case that books follow all the same rules as generic products and so they can inherit the rules of physical products. If this were not the case (i.e. if books had special rules that other products did not), then books and generic products would need to be separated and some functionality would be duplicated.
 
 This issue would require further consideration, but as I approach the recommended two-hour time limit, this will have to be left as is.
+
+Tested with openjdk 10.0.2 2018-07-17
