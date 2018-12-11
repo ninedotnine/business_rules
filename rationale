@@ -1,0 +1,9 @@
+I found the instructions for this kata to be lacking in detail. Were I actually working this type of job, I would likely have a much clearer idea of what our objectives were, and if not, I would have many questions to ask.
+
+Without clearer direction, I have tried to do the best I could. My strategy for this problem is for each "rule" to be its own sublclass of either Account or Product. The logic required for each special case can be contained in its own dedicated file, allowing for relatively easy reading and modification.
+
+There are two "top-level" abstract classes, Account and Product. All other rules will be expected to inherit from one of these. There is also one interface, Payment, which has one method, process_payment. Every rule will implement this method.
+
+This architecture is far from perfect; one notable problem with my top-down hierarchy is illustrated by Books and GenericProducts. It happens to be the case that books follow all the same rules as generic products and so they can inherit the rules of physical products. If this were not the case (i.e. if books had special rules that other products did not), then books and generic products would need to be separated and some functionality would be duplicated.
+
+This issue would require further consideration, but as I approach the recommended two-hour time limit, this will have to be left as is.
